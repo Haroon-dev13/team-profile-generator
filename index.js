@@ -20,10 +20,9 @@ const teamMembers = [];
 async function addTeamMember() {
     try {
 
-        // Prompts user with questions defined in questions.js and wait for the user to answer
+        // Prompts user with questions
         const answers = await inquirer.prompt(questions);
 
-         // Destructure the answers object to obtain the necessary information to create a new team member
         const { name, id, email, role } = answers;
 
          // Check the role of the team member being added and create relevant object
@@ -39,6 +38,9 @@ async function addTeamMember() {
             case "Intern":
                 const intern = new Intern(name, id, email, answers.school);
                 teamMembers.push(intern);
+                break;
+            case "Quit":
+                quit();
                 break;
         }
          // Check if the user wants to add another team member or render the HTML
