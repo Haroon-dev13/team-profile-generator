@@ -21,7 +21,7 @@ To use this application, run the index.js file by using command "node index.js" 
 
 ### Team OutPut
 
-![Terminal View](assets/images/output.png)
+![Terminal View](assets/images/teams-output.png)
 
 
 ## License
